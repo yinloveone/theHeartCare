@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../utils/gradient_button.dart';
+import '../routers/application.dart';
+import 'package:fluro/fluro.dart';
 
 class Login extends StatelessWidget {
+  TransitionType transitionType = TransitionType.native;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -75,7 +78,14 @@ class Login extends StatelessWidget {
           Container(
             alignment: Alignment.bottomRight,
             margin: EdgeInsets.fromLTRB(0.0, 30.0, 20.0, 0.0),
-            child: Text('没有账号？去注册', style: TextStyle(color: Color(0xff4F77E1))),
+            child: InkWell(
+              child:
+                  Text('没有账号？去注册', style: TextStyle(color: Color(0xff4F77E1))),
+              onTap: () {
+                Application.router.navigateTo(context, "/register",
+                    transition: TransitionType.none);
+              },
+            ),
           ),
           Container(
             height: 50,

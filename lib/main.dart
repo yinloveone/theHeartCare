@@ -1,40 +1,65 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'pages/login.dart';
 import 'pages/index_page.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluro/fluro.dart';
+import 'routers/application.dart';
+import 'routers/routes.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool loginState = false;
+  _MyAppState() {
+    final router = FluroRouter();
+    Routes.configureRoutes(router);
+    Application.router = router;
+  }
+  void initState() {
+    super.initState();
+    //_validateLogin();
+  }
+
+  //登录验证
+  /* Future _validateLogin() async {
+    Future<dynamic> future = Future(() async {
+      SharedPreferences prefs = await SharedPreferences.getInstance();
+      return prefs.getString("user_token");
+    });
+    future.then((val) {
+      if (val == null) {
+        setState(() {
+          loginState = false;
+        });
+      } else {
+        setState(() {
+          loginState = true;
+        });
+      }
+    }).catchError((_) {
+      print("catchError");
+    });
+  }*/
+
   @override
   Widget build(BuildContext context) {
-    // ScreenUtil.init(context, width: 750, height: 1370);
     return ScreenUtilInit(
-      designSize: Size(750, 1334),
-      allowFontScaling: false,
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          // This is the theme of your application.
-          //
-          // Try running your application with "flutter run". You'll see the
-          // application has a blue toolbar. Then, without quitting the app, try
-          // changing the primarySwatch below to Colors.green and then invoke
-          // "hot reload" (press "r" in the console where you ran "flutter run",
-          // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
-          // is not restarted.
-          primarySwatch: Colors.blue,
-          // This makes the visual density adapt to the platform that you run
-          // the app on. For desktop platforms, the controls will be smaller and
-          // closer together (more dense) than on mobile platforms.
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-        ),
-        home: IndexPage(),
-      ),
-    );
+        designSize: Size(750, 1370),
+        allowFontScaling: false,
+        child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: '胸痛管家',
+            theme: ThemeData(
+              primaryColor: Colors.white,
+            ),
+            //onGenerateRoute: Application.router.generator,
+            home: loginState ? IndexPage() : Login()));
   }
 }

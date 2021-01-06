@@ -1,13 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
-import '../pages/login.dart';
+import '../pages/register.dart';
 
-//var usersHandler =
-// Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
-// return Login(params["id"][0]);
-//});
-
-var rootHandler = Handler(
+var registerHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  return Login(); //返回登录页面
+  return Register(); //返回登录页面
 });
+
+/*var demoRouteHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  String message = params["message"]?.first;
+  String colorHex = params["color_hex"]?.first;
+  String result = params["result"]?.first;
+  Color color = Color(0xFFFFFFFF);
+  if (colorHex != null && colorHex.length > 0) {
+    color = Color(ColorHelpers.fromHexString(colorHex));
+  }
+  return DemoSimpleComponent(message: message, color: color, result: result);
+});*/
