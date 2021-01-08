@@ -16,7 +16,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  bool loginState = false;
+  bool loginState = true;
   _MyAppState() {
     final router = FluroRouter();
     Routes.configureRoutes(router);
