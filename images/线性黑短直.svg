@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024px" height="1024px" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>线性黑短直</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="512.5" cy="512.5" r="403.5"></circle>
+    </defs>
+    <g id="线性黑短直" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <circle stroke="#66320F" stroke-width="10" cx="512.5" cy="512.5" r="398.5"></circle>
+        <g id="woman-5" mask="url(#mask-2)">
+            <g transform="translate(295.000000, 231.000000)">
+                <path d="M65.3982974,435 L0,435 L0,217.498641 C0,97.3768026 97.6023243,0 218.000681,0 L218.000681,0 C338.399038,0 436,97.3768026 436,217.498641 L436,434.997282 L370.605789,434.997282" id="Shape" stroke="#66320F" stroke-width="10" fill="#390B21" stroke-linejoin="round"></path>
+                <path d="M283.942552,575 L151.058811,575 C90.8273404,575 42,624.248725 42,685 L42,685 L393,685 L393,685 C393,624.248725 344.174022,575 283.942552,575 L283.942552,575 Z" id="Shape" stroke="#66320F" stroke-width="10" fill="#FA6400" stroke-linejoin="round"></path>
+                <path d="M88,173.675492 L88,413.296672 C88,485.480286 146.427623,544 218.500679,544 L218.500679,544 C290.572377,544 349,485.481647 349,413.296672 L349,173.675492 L305.499321,173.675492 L283.748981,141 L261.998641,173.675492 L88,173.675492" id="Shape" stroke="#66320F" stroke-width="10" fill="#F2DED4" stroke-linejoin="round"></path>
+                <path d="M150,316 L150,316 C142.850589,316 137,305.651563 137,293 L137,270 C137,257.351042 142.849116,247 150,247 L150,247 C157.149411,247 163,257.348437 163,270 L163,293 C163,305.651563 157.149411,316 150,316 L150,316 Z" id="Shape" stroke="#66320F" stroke-width="10" fill="#551735" stroke-linejoin="round"></path>
+                <path d="M286,316 L286,316 C278.850589,316 273,305.651563 273,293 L273,270 C273,257.351042 278.849116,247 286,247 L286,247 C293.149411,247 299,257.348437 299,270 L299,293 C299,305.651563 293.149411,316 286,316 L286,316 Z" id="Shape" stroke="#66320F" stroke-width="10" fill="#551735" stroke-linejoin="round"></path>
+                <path d="M221.111369,435 C201.715895,435 178.370129,423.179543 181.240981,414.348429 C187.223836,395.955981 196.226827,417.885439 218.998422,417.885439 C241.207331,417.885439 250.727075,395.955981 256.70993,414.348429 C259.592265,423.179543 240.506843,435 221.111369,435" id="Fill-28" stroke="#66320F" stroke-width="10" fill="#E7645B" stroke-linejoin="round"></path>
+                <path d="M348,206 L358.749664,206 C376.561436,206 391,220.774191 391,239 C391,257.224435 376.561436,272 358.749664,272 L348,272" id="SVGCleanerId_0" stroke="none" fill="#E8C0A8"></path>
+                <path d="M218.5,631 L218.5,631 C206.626304,631 197,621.151049 197,608.999656 L197,543 L240,543 L240,608.999656 C239.998657,621.151049 230.373696,631 218.5,631 L218.5,631 Z" id="Shape" stroke="#66320F" stroke-width="10" fill="#ECCAB8" stroke-linejoin="round"></path>
+                <path d="M88,206 L77.2503358,206 C59.4385642,206 45,220.774191 45,239 C45,257.224435 59.4385642,272 77.2503358,272 L88,272" id="Shape" stroke="none" fill="#ECCAB8"></path>
+                <path d="M348,206 L358.749664,206 C376.561436,206 391,220.774191 391,239 C391,257.224435 376.561436,272 358.749664,272 L348,272" id="SVGCleanerId_0_1_" stroke="none" fill="#ECCAB8"></path>
+                <path d="M195,685 C195,672.850172 204.624961,663 216.5,663 C228.373696,663 238,672.848797 238,685" id="Shape" stroke="#66320F" stroke-width="10" fill="#FFFFFF" stroke-linejoin="round"></path>
+            </g>
+        </g>
+    </g>
+</svg>
