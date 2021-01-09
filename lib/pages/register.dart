@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../utils/gradient_button.dart';
+import '../utils/custom_appbar.dart';
 
 class Register extends StatelessWidget {
   Register({String id});
@@ -8,6 +9,7 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: customAppbar('注册', context),
       body: Container(
           child: Column(
         children: [

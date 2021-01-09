@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../routers/application.dart';
+import 'package:fluro/fluro.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,6 +31,18 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('首页'),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Image.asset("images/message.png",
+                height: ScreenUtil().setHeight(40),
+                width: ScreenUtil().setWidth(40)),
+            onPressed: () {
+              Application.router.navigateTo(context, "/message_page",
+                  transition: TransitionType.none);
+            },
+          ),
+        ],
         elevation: 0,
       ),
       body: Container(
@@ -169,7 +183,7 @@ class _HomePageState extends State<HomePage> {
 
 //轮播组件
 class SwiperDiy extends StatelessWidget {
-  List swiperDateList = ['images/banner1.jpg', 'images/banner2.png'];
+  List swiperDateList = ['images/banner1.png', 'images/banner2.png'];
   @override
   Widget build(BuildContext context) {
     return Container(

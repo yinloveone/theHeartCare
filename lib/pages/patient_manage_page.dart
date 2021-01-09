@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import '../utils/custom_appbar.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../routers/application.dart';
+import 'package:fluro/fluro.dart';
 
 class PatientManagePage extends StatefulWidget {
   @override
@@ -66,10 +68,16 @@ class _PatientManagePageState extends State<PatientManagePage> {
                     )),
                   ]),
             ),
-            Text(
-              '病历',
-              style: TextStyle(
-                  color: Color(0xff1785C6), fontSize: ScreenUtil().setSp(32)),
+            InkWell(
+              child: Text(
+                '病历',
+                style: TextStyle(
+                    color: Color(0xff1785C6), fontSize: ScreenUtil().setSp(32)),
+              ),
+              onTap: () {
+                Application.router.navigateTo(context, "/patient_info_page",
+                    transition: TransitionType.none);
+              },
             )
           ],
         ));

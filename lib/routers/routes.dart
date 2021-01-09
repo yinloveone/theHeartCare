@@ -4,6 +4,8 @@ import 'package:fluro/fluro.dart';
 
 class Routes {
   static String register = '/register';
+  static String patientInfo = '/patient_info_page';
+  static String messagePage = '/message_page';
 
   static void configureRoutes(FluroRouter router) {
     router.notFoundHandler = Handler(
@@ -11,10 +13,7 @@ class Routes {
       print("ROUTE WAS NOT FOUND !!!");
     });
     router.define(register, handler: registerHandler);
+    router.define(patientInfo, handler: patientInfoHandler);
+    router.define(messagePage, handler: messageHandler);
   }
-
-  //void defineRoutes(FluroRouter router) {
-  // it is also possible to define the route transition to use
-  // router.define("users/:id", handler: usersHandler, transitionType: TransitionType.inFromLeft);
-//  }
 }

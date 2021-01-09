@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:fluro/fluro.dart';
+import 'package:theHeartCare/pages/patient_info_page.dart';
 import '../pages/register.dart';
+import '../pages/message_page.dart';
 
 var registerHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
-  return Register(); //返回登录页面
+  return Register(); //注册页面
 });
-
+var patientInfoHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return PatientInfoPage(); //患者详情页面
+});
+var messageHandler = Handler(
+    handlerFunc: (BuildContext context, Map<String, List<String>> params) {
+  return MessagePage(); //患者详情页面
+});
 /*var demoRouteHandler = Handler(
     handlerFunc: (BuildContext context, Map<String, List<String>> params) {
   String message = params["message"]?.first;
